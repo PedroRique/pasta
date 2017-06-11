@@ -1,0 +1,38 @@
+<div class="container" ng-controller="fileCtrl">  
+
+  	<br>
+  	<form ng-submit="registerFile.regFile();">
+  	
+  		<label>Nome do Arquivo:</label>
+		<input class="form-control" type="text" name="filename" placeholder="Insert Filename" ng-model="registerFile.fileData.filename">
+		<br>
+  		<button class="btn btn-primary" type="submit">Novo</button>
+  	</form>
+
+  	<button class="btn btn-primary" ng-click="registerFile.upload();">Upload</button>
+  	<br>
+  	<input id="uploadInput" type="file" file-on-change="uploadFile" accept="application/pdf"  />
+  	
+  <table id="fileTable" class="table">
+  </table>
+
+
+
+	<div class="junbotron text-center" ng-show="register.loading">
+		<span class="glyphicon glyphicon-repeat spinner"></span>
+		<p>Loading...</p>
+	</div>
+
+	<br>
+
+	<div class="row show-hide-message" ng-show="register.successMsg">
+		<div class="alert alert-success">{{ register.successMsg }}</div>
+	</div>
+
+	<br>
+
+	<div class="row show-hide-message" ng-show="register.errorMsg">
+		<div class="alert alert-danger">{{ register.errorMsg }}</div>
+	</div>
+  
+</div>

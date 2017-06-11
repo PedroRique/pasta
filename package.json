@@ -1,0 +1,25 @@
+{
+  "name": "digitalteste",
+  "version": "1.0.0",
+  "description": "teste",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "MEAN",
+    "stack"
+  ],
+  "author": "Pedro Rique",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongoose": "^4.10.5",
+    "morgan": "^1.8.2",
+    "pdf-text-extract": "^1.5.0",
+    "pdf2json": "^1.1.7"
+  }
+}
