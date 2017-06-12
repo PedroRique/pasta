@@ -1,25 +1,26 @@
 <div class="page-header">
-	<h1>User Login</h1>
+	<h1>Login</h1>
 </div>
 
 <form ng-submit="main.doLogin();">
 	
-	<label>Username:</label>
-	<input class="form-control" type="text" name="username" placeholder="Insert Username" ng-model="main.loginData.username">
+	<label>Nome de Usuário:</label>
+	<input class="form-control" type="text" name="username" placeholder="Insira Nome de Usuário" ng-model="main.loginData.username">
 	<br>
 
-	<label>Password:</label>
-	<input class="form-control" type="password" name="password" placeholder="Insert Password" ng-model="main.loginData.password">
+	<label>Senha:</label>
+	<input class="form-control" type="password" name="password" placeholder="Insira Senha" ng-model="main.loginData.password">
 	<br>
 
 	<button class="btn btn-primary" type="submit">Login</button>
+	<button style="float:right;" class="btn btn-primary" ng-click="main.goRegister();">Registrar</button>
 
 
 </form>
 
 <div class="junbotron text-center" ng-show="main.loading">
 	<span class="glyphicon glyphicon-repeat spinner"></span>
-	<p>Loading...</p>
+	<p>Carregando...</p>
 </div>
 
 <br>

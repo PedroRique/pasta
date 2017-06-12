@@ -14,6 +14,8 @@
     <title>Digital</title>
 
     <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/build/pdf.js"></script>
+    <script src="assets/js/build/pdf.worker.js"></script>
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
@@ -45,6 +47,8 @@
 
 <!-- Latest compiled and minified Locales -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/locale/bootstrap-table-zh-CN.min.js"></script>
+
+
   </head>
 
   <body ng-app='fileApp' ng-controller="mainCtrl as main">
@@ -52,7 +56,7 @@
    
     <div class="container theme-showcase" role="main">
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+<!--     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -69,14 +73,14 @@
             <li><a href="/login">Login</a></li>
             <li><a href="/register">Register</a></li>
           </ul>
-        </div><!--/.nav-collapse -->
+        </div>
       </div>
-    </nav>
+    </nav> -->
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
         <h1>Pasta Digitalizada</h1>
-        <p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.</p>
+        <p>Lista de documentos com título e conteúdo.</p>
       </div>
 
       <div ng-view></div>
@@ -87,6 +91,9 @@
     <script src="assets/js/bootstrap.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/locale/bootstrap-table-zh-CN.min.js"></script>
+
+    <script src="assets/js/bootstrap.js"></script>
+    
 
   </body>
 </html>

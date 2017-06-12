@@ -16,7 +16,9 @@ angular.module('mainController',['authServices'])
  				app.successMsg = data.data.message;
 				app.loading = false;
 				$timeout(function(){
-					$location.path('/');
+					app.errorMsg = false;
+					app.successMsg = false;
+					$location.path('/files');
 				}, 2000)
 				
 
@@ -26,6 +28,10 @@ angular.module('mainController',['authServices'])
 
  			}
 		});
+	}
+
+	this.goRegister = function(){
+		$location.url('/register');
 	}
 
 })

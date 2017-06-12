@@ -16,7 +16,9 @@ angular.module('userController',['userServices'])
  				app.successMsg = data.data.message;
 				app.loading = false;
 				$timeout(function(){
-					$location.path('/');
+					app.errorMsg = false;
+					app.successMsg = false;
+					$location.path('/files');
 				}, 2000)
 				
 

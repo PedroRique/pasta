@@ -1,6 +1,32 @@
+<script type="text/javascript">
+	$( document ).ready(function() {
+
+    	
+    	$(".uploadBtn").on('click',function(elem){
+			var currentRow = elem.currentTarget.parentElement.previousElementSibling.previousElementSibling.innerText;
+			window.currentRow = currentRow;
+			$("#uploadInput").click();
+
+		});
+
+		$(".glyphicon-upload").css("font-size","25px");
+    	$('td').css("text-align","center");
+	});
+
+
+</script>
+
+
 <div class="container" ng-controller="fileCtrl">  
 
-  	<br>
+
+  	<input style="display: none;" id="uploadInput" type="file" value="Upload" file-on-change="uploadFile" accept="application/pdf"  />
+
+
+  <table id="fileTable" data-toggle="table" class="table">
+  </table>
+
+  	  	<br>
   	<form ng-submit="registerFile.regFile();">
   	
   		<label>Nome do Arquivo:</label>
@@ -8,14 +34,6 @@
 		<br>
   		<button class="btn btn-primary" type="submit">Novo</button>
   	</form>
-
-  	<button class="btn btn-primary" ng-click="registerFile.upload();">Upload</button>
-  	<br>
-  	<input id="uploadInput" type="file" file-on-change="uploadFile" accept="application/pdf"  />
-  	
-  <table id="fileTable" class="table">
-  </table>
-
 
 
 	<div class="junbotron text-center" ng-show="register.loading">

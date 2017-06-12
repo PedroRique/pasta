@@ -6,12 +6,5 @@ var FileSchema = new Schema({
   createdAt : {type : Date, required: false}
 });
 
-FileSchema.methods.extractText = function () {
-	
-	// var pdfText = pdfData.name;
-
-	return {success:true,message:"teste"};
-}
-
 module.exports = mongoose.model('File',FileSchema);
 

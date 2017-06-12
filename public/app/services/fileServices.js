@@ -12,8 +12,9 @@ angular.module('fileServices',[])
 		return $http.get('/api/files');
 	}
 
-	fileFactory.extract = function(pdfData){
-		return $http.post('/api/extract',pdfData);
+	fileFactory.update = function(fileData){
+		var req = "/api/files/:'" + fileData.filename + "'";
+		return $http.post(req,fileData);
 	}
 
 	return fileFactory;

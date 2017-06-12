@@ -1,15 +1,6 @@
 var User = require('../models/user');
 var File = require('../models/file');
-// var path = require('path');
-// var filePath = path.join(__dirname, 'test/data/multipage.pdf');
-// var pdfExtract = require('pdf-text-extract');
-// extract(filePath, { splitPages: false }, function (err, text) {
-//   if (err) {
-//     console.dir(err)
-//     return
-//   }
-//   console.dir(text)
-// })
+
 
 module.exports = function(router) {
 
@@ -90,14 +81,26 @@ module.exports = function(router) {
 		}		
 	});
 
+	router.post('/files/:filename',function(req,res){
+		var conditions = {
+			filename : req.body.filename
+		}
+		console.log(conditions);
+		
+		File.findOne(conditions,function(err,file){
 
-	//PDF EXTRACT ROUTE
-	router.post('/extract',function(req,res){
-		// var file = new File();
-		// var test = file.extractText();
-		// res.send(test);
-		pdfExtract
-		res.send(req.body);
+			file.content = req.body.content;
+		  	file.save(function(err){
+
+		  		if(!err){
+					res.json({success : false, message: "Erro!"})
+		  		} else {
+		  			res.json({success : true, message: "Sucesso!"});
+		  		}
+		  		
+		  	});
+			
+		});
 	});
 
 	//USER LOGIN ROUTE

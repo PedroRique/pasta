@@ -5,11 +5,7 @@ angular.module('appRoutes',['ngRoute'])
 	$routeProvider
 
 	.when('/',{
-		templateUrl : 'app/views/pages/home.html'
-	})
-
-	.when('/about',{
-		templateUrl : 'app/views/pages/about.html'
+		templateUrl : 'app/views/pages/users/login.html'
 	})
 
 	.when('/register',{
@@ -28,7 +24,7 @@ angular.module('appRoutes',['ngRoute'])
 		templateUrl : 'app/views/pages/users/login.html'
 	})
 
-	.otherwise({redirectTo:'/'})
+	.otherwise({redirectTo:'/login'})
 
 
 	$locationProvider.html5Mode({
